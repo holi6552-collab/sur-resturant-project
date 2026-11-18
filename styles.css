@@ -705,3 +705,57 @@ footer a:hover {
         border-bottom: 1px solid var(--gold);
     }
 }
+
+/* DESKTOP - Show links, hide hamburger */
+@media screen and (min-width: 768px) {
+
+    .menu-toggle {
+        display: none !important;
+    }
+
+    .site-nav {
+        display: flex !important;
+        width: auto;
+        overflow: visible;
+    }
+
+    .site-nav ul {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 8px;
+    }
+}
+
+/* PHONE - Show hamburger, hide links */
+@media screen and (max-width: 767px) {
+
+    .menu-toggle {
+        display: block;
+        margin-left: auto;
+    }
+
+    .site-nav {
+        display: grid;
+        grid-template-rows: 0fr;
+        width: 100%;
+        overflow: hidden;
+        transition: grid-template-rows 0.3s ease;
+    }
+
+    .site-nav.is-open {
+        grid-template-rows: 1fr;
+    }
+
+    .site-nav ul {
+        min-height: 0;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+}
+

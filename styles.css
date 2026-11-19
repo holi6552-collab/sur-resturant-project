@@ -101,16 +101,19 @@ header strong {
     letter-spacing: 0.5px;
 }
 
-/* Navigation */
+
+
+/* Navigation - Desktop */
 .site-nav {
     display: flex;
     align-items: center;
+    width: auto;
 }
 
 .site-nav ul {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     list-style: none;
     gap: 8px;
     margin: 0;
@@ -118,7 +121,6 @@ header strong {
 }
 
 .site-nav li {
-    list-style: none;
     margin: 0;
     padding: 0;
 }
@@ -132,7 +134,6 @@ header strong {
     letter-spacing: 1px;
     text-transform: uppercase;
     padding: 12px;
-    transition: color 0.3s ease;
 }
 
 .site-nav a:hover,
@@ -140,16 +141,14 @@ header strong {
     color: var(--gold);
 }
 
-/* Hamburger Menu */
+/* Hide Hamburger on Desktop */
 .menu-toggle {
     display: none;
-    background-color: transparent;
+    background: transparent;
     color: var(--cream);
     border: 2px solid var(--gold);
-    border-radius: 4px;
     padding: 8px 14px;
     font-size: 24px;
-    line-height: 1;
     cursor: pointer;
 }
 
